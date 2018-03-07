@@ -1,0 +1,31 @@
+<section class="page-section">
+  <h1 class="form-title">Reactive</h1>
+  <form class="template-driven-form" (ngSubmit)="onSubmit()" [formGroup]="reactiveForm">
+    <fieldset class="form__fieldset">
+      <label for="email" class="form__label">E-mail</label>
+      <input formControlName="email" name="email" type="email" id="email" class="form__input">
+      <span *ngIf="reactiveForm.get('email').valid && (reactiveForm.get('email').dirty || reactiveForm.get('email').touched)" class="form-warn">valid</span>
+      <span *ngIf="reactiveForm.get('email').invalid && (reactiveForm.get('email').dirty || reactiveForm.get('email').touched)" class="form-warn">invalid</span>
+    </fieldset>
+    <fieldset class="form__fieldset">
+      <label for="name" class="form__label">Name</label>
+      <input formControlName="name" name="name" type="text" id="name" class="form__input">
+      <span [hidden]="!reactiveForm.get('name').touched" class="form-warn">touched</span>
+      <span [hidden]="!reactiveForm.get('name').dirty" class="form-warn">dirty</span>
+      <span [hidden]="!reactiveForm.get('name').pristine" class="form-warn">pristine</span>
+    </fieldset>
+    <fieldset class="form__fieldset">
+      <label for="country" class="form__label">Country</label>
+      <input formControlName="country" name="country" type="text" id="country" class="form__input">
+    </fieldset>
+    <fieldset class="form__fieldset">
+      <label for="language" class="form__label">Language</label>
+      <input formControlName="language" name="language" type="text" id="language" class="form__input">
+    </fieldset>
+    <button [disabled]="!reactiveForm.valid" type="submit" class="form__submit-btn">Submit</button>
+    <button type="button" class="form__submit-btn" (click)="fillForm()" >Fill Form</button>
+    <button type="button" class="form__submit-btn" (click)="reactiveForm.reset()" >Clear Form</button>
+    <button type="button" class="form__submit-btn" (click)="resetPartial()" >Clear Partial</button>
+  </form>
+  <p>Form value: {{ reactiveForm.value | json }}</p>
+</section>

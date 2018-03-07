@@ -4,12 +4,16 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { TemplateDrivenFormComponent } from './template-driven-form/template-driven-form.component';
+import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
+import { ForbiddenNameValidatorDirective } from './template-driven-form/forbidden-name-validator.directive';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    TemplateDrivenFormComponent
+    TemplateDrivenFormComponent,
+    ReactiveFormComponent,
+    ForbiddenNameValidatorDirective
   ],
   imports: [
     BrowserModule,

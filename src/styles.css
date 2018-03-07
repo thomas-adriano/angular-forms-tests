@@ -1,5 +1,6 @@
-html, body {
-  font-family: 'Lato', sans-serif;
+html,
+body {
+  font-family: "Lato", sans-serif;
   color: #111111;
 }
 
@@ -7,7 +8,7 @@ html, body {
   min-width: 50vw;
   min-height: 33vh;
   padding: 0.5em;
-  border: #DDDDDD 1px solid;
+  border: #dddddd 1px solid;
   border-radius: 20px;
 }
 
@@ -16,7 +17,7 @@ html, body {
 }
 
 .form__fieldset + .form__fieldset,
-.page-section + .page-section  {
+.page-section + .page-section {
   margin-top: 0.8em;
 }
 
@@ -25,18 +26,17 @@ html, body {
 }
 
 .form__label {
-  font-size: 1.2em
+  font-size: 1.2em;
 }
 
 .form__input {
   border-radius: 5px;
-  border: #DDDDDD 1px solid;
+  border: #dddddd 1px solid;
   height: 2rem;
-  font-size: 1em
+  font-size: 1em;
 }
 
 .form-warn {
-
 }
 
 .display-flex-column-centered {
@@ -48,9 +48,31 @@ html, body {
 
 .form__submit-btn {
   font-size: 1em;
-  background-color: #FEFEFE;
-  border: #DDDDDD 1px solid;
+  background-color: #fefefe;
+  border: #dddddd 1px solid;
   box-shadow: none;
   border-radius: 3px;
   padding: 1em;
+}
+
+/* Angular's form control element classes */
+
+.ng-valid {
+  background-color: rgba(46, 204, 64, 0.2);
+}
+.ng-invalid {
+  background-color: rgba(255, 65, 54, 0.2);
+}
+.ng-disabled {
+  background-color: rgba(0, 116, 217, 0.2);
+}
+.ng-pending {
+}
+.ng-pristine {
+}
+.ng-dirty {
+}
+.ng-untouched {
+}
+.ng-touched {
 }
