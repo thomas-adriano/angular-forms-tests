@@ -1,0 +1,56 @@
+html, body {
+  font-family: 'Lato', sans-serif;
+  color: #111111;
+}
+
+.page-section {
+  min-width: 50vw;
+  min-height: 33vh;
+  padding: 0.5em;
+  border: #DDDDDD 1px solid;
+  border-radius: 20px;
+}
+
+.form-title {
+  text-align: center;
+}
+
+.form__fieldset + .form__fieldset,
+.page-section + .page-section  {
+  margin-top: 0.8em;
+}
+
+.form__fieldset {
+  border: none;
+}
+
+.form__label {
+  font-size: 1.2em
+}
+
+.form__input {
+  border-radius: 5px;
+  border: #DDDDDD 1px solid;
+  height: 2rem;
+  font-size: 1em
+}
+
+.form-warn {
+
+}
+
+.display-flex-column-centered {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form__submit-btn {
+  font-size: 1em;
+  background-color: #FEFEFE;
+  border: #DDDDDD 1px solid;
+  box-shadow: none;
+  border-radius: 3px;
+  padding: 1em;
+}
